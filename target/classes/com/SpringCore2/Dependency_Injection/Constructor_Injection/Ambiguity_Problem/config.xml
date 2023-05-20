@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:util="http://www.springframework.org/schema/util"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd
+">
+
+
+<!-- <bean name="sum" class="com.SpringCore2.Dependency_Injection.Constructor_Injection.Ambiguity_Problem.Sum">
+<constructor-arg value="16"  />  // by default this values are String.
+<constructor-arg value="4"   />
+</bean>
+ -->
+
+<!-- <bean name="sum" class="com.SpringCore2.Dependency_Injection.Constructor_Injection.Ambiguity_Problem.Sum">
+<constructor-arg value="20" type="int" />
+<constructor-arg value="5"  type="int"  />
+</bean>
+ -->
+ 
+<!--  <bean name="sum" class="com.SpringCore2.Dependency_Injection.Constructor_Injection.Ambiguity_Problem.Sum">
+<constructor-arg value="15.7" type="Double" />
+<constructor-arg value="82.9"  type="Double"  />
+</bean> -->
+
+
+<!-- <bean name="sum" class="com.SpringCore2.Dependency_Injection.Constructor_Injection.Ambiguity_Problem.Sum">
+<constructor-arg value="5.5"  type="Double"  />
+<constructor-arg value="65" type="int" />
+</bean> -->
+
+
+<bean name="sum" class="com.SpringCore2.Dependency_Injection.Constructor_Injection.Ambiguity_Problem.Sum">
+<constructor-arg value="5.5"  index="1" type="Double" />
+<constructor-arg value="65" index="0" type="String" />
+</bean> 
+
+
+</beans>
